@@ -5,7 +5,7 @@ In this assignment you will create a python script that can decode messages prov
 
 Morse code and telegraphs were widely used in the US in the 1850s and 1860s.  It was the very first telecommunication device, and revolutionized the way people messaged each other.  To this day, it still has its use in some applications, but has mostly replaced with digital data channels.
 
-The Morse code encodes every character as a sequence of "dots" and "dashes". For example, the letter A is coded as `·−`, letter Q is coded as `−−·−`, and digit 1 is coded as `·−−−−`. The Morse code is case-insensitive, traditionally capital letters are used. When the message is written in Morse code, a single space is used to separate the character codes and 3 spaces are used to separate words. For example, the message HEY JUDE in Morse code is `···· · −·−−   ·−−− ··− −·· ·`.
+The Morse code encodes every character as a sequence of "dots" and "dashes". For example, the letter A is coded as `.-`, letter Q is coded as `--.-`, and digit 1 is coded as `.----`. The Morse code is case-insensitive, traditionally capital letters are used. When the message is written in Morse code, a single space is used to separate the character codes and 3 spaces are used to separate words. For example, the message HEY JUDE in Morse code is <code>.... . -.--&nbsp;&nbsp;&nbsp;.--- ..- -.. .</code>
 
 NOTE: Extra spaces before or after the code have no meaning and should be ignored.
 
@@ -23,7 +23,7 @@ NOTE: Extra spaces before or after the code have no meaning and should be ignore
 Complete the `decode_morse` function within the `morse.py` module provided.  The function accepts a string parameter, which consists of '.' and '-' and ' ' characters arranged to form a morse code message.  The function should use the included MORSE_2_ASCII mapping between Morse letters and alphabetic characters to return an ASCII string which represents the decoded input message.
 
 ```
-decode_morse("···· · −·−−   ·−−− ··− −·· ·") -> "HEY JUDE"
+decode_morse(".... . -.--   .--- ..- -.. .") -> "HEY JUDE"
 ```
 
 Use the built-in tests from this assignment to test your function.  Your `decode_morse` function should pass all of the included unit tests before advancing to part B.
@@ -50,7 +50,7 @@ When transmitting Morse code, the international standard specifies that:
 ```
 Notice there is no mention of what a "time unit" is -- it is up to your function to figure that out.  For this excercise, `Time Unit` is the reciprocal of the transmission rate.  In some cases, a '1' by itself means 'dot' (this would be a fast key operator).  In other cases, '1111' might also mean 'dot' if the key operator is slow.
 
-For example, the message HEY JUDE, that is `···· · −·−−   ·−−− ··− −·· ·` may be received as follows:
+For example, the message HEY JUDE, that is <code>.... . -.--&nbsp;&nbsp;&nbsp;.--- ..- -.. .</code> may be received as follows:
 
 >`1100110011001100000011000000111111001100111111001111110000000000000011001111110011111100111111000000110011001111110000001111110011001100000011`
 
