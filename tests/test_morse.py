@@ -13,6 +13,8 @@ import unittest
 import importlib
 import subprocess
 
+# suppress __pycache__ and .pyc files
+sys.dont_write_bytecode = True
 
 # Kenzie devs: change this to 'soln.morse' to test solution
 PKG_NAME = 'morse'
